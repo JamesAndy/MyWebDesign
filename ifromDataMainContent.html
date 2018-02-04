@@ -16,6 +16,7 @@
   <script type="text/javascript" src="./js/jquery.tablesorter.min.js"></script>
   <script type="text/javascript" src="./js/jquery.tablesorter.widgets.js"></script>
   <script type="text/javascript" src="./js/jquery.tablesorter.pager.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 
   <!-- pager plugin -->
 
@@ -71,16 +72,10 @@
       removeRows: false,
       output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
 
-    });
-
-    });
-
-
-    $(document).ready(function(){
-      $("#myBtn").click(function(){
-          $("#myModal").modal();
       });
-  });
+    });
+
+
 
   </script>
 
@@ -91,7 +86,28 @@
 		<h4 class="">查詢條件</h4>
 		<div class="row placeholders">
 			<div class="table-responsive">
-				<button id="myBtn" type="button" class="btn btn-info btn-sm active pull-left" data-toggle="modal" data-target="#sysInformation">系統說明</button>
+				<button id="sysInfoBtn" type="button" class="btn btn-info btn-sm active pull-left" data-toggle="modal" data-target="#sysInformation">系統說明</button>
+        <!-- Modal -->
+    		<div class="modal fade" id="sysInfoDial" role="dialog">
+    			<div class="modal-dialog">
+    				<!-- Modal content-->
+    				<div class="modal-content">
+    					<div class="modal-header">
+    						<button type="button" class="close" data-dismiss="modal">&times;</button>
+    						<h4 class="modal-title">對話框標題</h4>
+    					</div>
+    					<div class="modal-body">
+    						<p>對話框內容</p>
+    					</div>
+    					<div class="modal-footer">
+    						<button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+    					</div>
+    				</div>
+    				<!-- Modal content-->
+    			</div>
+    		</div>
+    		<!-- Modal -->
+
 				<form>
 					<table class="table">
 						<tbody>
@@ -219,26 +235,7 @@
 				</tbody>
 			</table>
 		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="myModal" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">對話框標題</h4>
-					</div>
-					<div class="modal-body">
-						<p>對話框內容</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-					</div>
-				</div>
-				<!-- Modal content-->
-			</div>
-		</div>
-		<!-- Modal -->
+
 	</div>
 </body>
 </html>

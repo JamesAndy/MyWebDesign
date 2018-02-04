@@ -12,14 +12,20 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+
+  <script type="text/javascript">
+  function changeIframeMainContent(srcValue){
+    $("#ifromDataMainContent").attr("src",srcValue);
+  }
+  </script>
 </head>
 <body>
 	<div class="content_header">
     <div class="headTabs">
       <ul class="nav nav-tabs">
-        <li role="presentation" data-toggle="tab" class="active"><a href="#">搜尋</a></li>
-        <li role="presentation" data-toggle="tab"><a href="#">編輯</a></li>
-        <li role="presentation" data-toggle="tab"><a href="#">基本資訊</a></li>
+        <li role="presentation" data-toggle="tab" class="active" onclick="changeIframeMainContent('ifromDataMainContent.html');"><a>搜尋</a></li>
+        <li role="presentation" data-toggle="tab" onclick="changeIframeMainContent('ifromDataCkeditor.html');"><a>編輯版</a></li>
+        <li role="presentation" data-toggle="tab"><a>基本資訊</a></li>
       </ul>
     </div>
   </div>

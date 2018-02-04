@@ -7,20 +7,12 @@ body {
   padding-top: 0px;
   width: auto;
   height: 100vh;
-<<<<<<< HEAD
   overflow-y: hidden;
 }
 
 .ifromDataMain{
   width: 100%;
   height: 100vh;
-=======
-}
-
-.ifromMain{
-  width: 100%;
-  height: 100%;
->>>>>>> b283861072617253c0c1b1a2a2ca25f73c523e30
 }
 
 
