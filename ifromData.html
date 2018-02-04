@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-datetimepicker.min.css" />
+  <link rel="stylesheet" href="./css/ifromTop.css">
+  <link rel="stylesheet" href="./css/mainBoard.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- pager plugin -->
+  <title>mainBoard</title>
+  <script>
+    function changeIframeMain(srcValue,breadcrumbName){
+      $("#breadcrumbName").text(breadcrumbName);
+      $("#ifromDataMain").attr("src",srcValue);
+    }
+  </script>
+</head>
+<body>
+  <!-- headerBar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">黃雛後台</a>
+      </div>
+      <div class="container-fluid">
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--左邊NAV BAR -->
+  <div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+      <li data-toggle="tab" class="active" onclick="changeIframeMain('ifromDataMain.html','總攬');"><a>總攬</a></li>
+      <li data-toggle="tab" onclick="changeIframeMain('ifromDataMain2.html','切版');"><a>切版</a></li>
+      <li><a>Analytics</a></li>
+      <li><a>Export</a></li>
+    </ul>
+    <ul class="nav nav-sidebar">
+      <li><a>設定</a></li>
+      <li onclick="changeIframeMain('aboutData.html','關於黃雛系統');"><a>關於黃雛系統</a></li>
+    </ul>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="content_header">
+          <div class="headcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li id="breadcrumbName" class="breadcrumb-item active" aria-current="page">關於黃雛系統</li>
+            </ol>
+          </div>
+        </div>
+        <iframe id="ifromDataMain" class="ifromDataMain"  frameborder="0" src="ifromDataMain.html" ></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

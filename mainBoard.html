@@ -75,6 +75,14 @@
     });
 
     });
+
+
+    $(document).ready(function(){
+      $("#myBtn").click(function(){
+          $("#myModal").modal();
+      });
+  });
+
   </script>
 
   <title>mainBoard</title>
@@ -147,7 +155,7 @@
         <h4 class="page-header">查詢條件</h4>
         <div class="row placeholders">
           <div class="table-responsive">
-            <button type="button" class="btn btn-info btn-sm active pull-left" data-toggle="modal" data-target="#sysInformation">系統說明</button>
+            <button id="myBtn" type="button" class="btn btn-info btn-sm active pull-left" data-toggle="modal" data-target="#sysInformation">系統說明</button>
             <form>
               <table class="table">
                 <tbody>
@@ -278,5 +286,28 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
 </body>
 </html>
