@@ -23,11 +23,7 @@
 
 
   <script type="text/javascript">
-  $(function() {
-    $('#datetimepicker1').datetimepicker({
-      format:"YYYY/MM/DD"
-    });
-  });
+  
   $(function() {//查詢結果設定
     $.tablesorter.themes.bootstrap = {
       table        : 'table table-bordered table-striped',
@@ -133,7 +129,7 @@
 									<td>
 										<div class='input-group date' id='datetimepicker1'>
 											<input type='text' class="form-control" />
-											<span class="input-group-addon">
+											<span id='testOD' class="input-group-addon" onclick="$('#'+$('#'+this.id).parent().attr('id')).datetimepicker({format:'YYYY/MM/DD'});">
 																	<span class="glyphicon glyphicon-calendar"></span>
 											</span>
 										</div>
