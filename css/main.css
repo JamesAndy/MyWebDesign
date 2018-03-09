@@ -6,3 +6,8 @@ body{
 main{
 
 }
+
+.ifromDataMain{
+  width: 100%;
+  height: 80vh;
+}
